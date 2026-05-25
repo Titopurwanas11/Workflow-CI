@@ -1,0 +1,79 @@
+name: MLflow Project Training CI
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  train-model:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas==2.2.2
+          pip install numpy==1.26.4
+          pip install scikit-learn==1.5.2
+          pip install mlflow==2.19.0
+          pip install matplotlib==3.9.2
+
+      - name: Check project structure
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Repository files:"
+          ls -R
+
+      - name: Run MLflow Project
+        run: |
+          mlflow run MLProject --env-manager=local
+
+      - name: Validate training outputs
+        run: |
+          test -f MLProject/run_id.txt
+          test -d MLProject/artifacts
+          test -d MLProject/mlruns
+          test -f MLProject/artifacts/confusion_matrix.png
+          test -f MLProject/artifacts/classification_report.txt
+          test -f MLProject/artifacts/roc_curve.png
+          test -f MLProject/artifacts/metrics.json
+          echo "Training outputs are valid."
+
+      - name: Upload training artifacts
+        uses: actions/upload-artifact@v6
+        with:
+          name: mlflow-training-artifacts
+          path: |
+            MLProject/artifacts/
+            MLProject/mlruns/
+            MLProject/run_id.txt
+
+      - name: Commit training outputs
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add MLProject/artifacts/
+          git add MLProject/mlruns/
+          git add MLProject/run_id.txt
+
+          if git diff --cached --quiet; then
+            echo "No training output changes to commit."
+          else
+            git commit -m "Update MLflow training artifacts"
+            git push
+          fi
