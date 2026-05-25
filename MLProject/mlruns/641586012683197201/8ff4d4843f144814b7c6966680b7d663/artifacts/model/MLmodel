@@ -1,0 +1,66 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+mlflow_version: 2.19.0
+model_size_bytes: 7557071
+model_uuid: 5ff54222c2e94bd5a641e97ef374b0fb
+run_id: 8ff4d4843f144814b7c6966680b7d663
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "age", "required": true}, {"type": "double",
+    "name": "balance", "required": true}, {"type": "double", "name": "day", "required":
+    true}, {"type": "double", "name": "campaign", "required": true}, {"type": "double",
+    "name": "pdays", "required": true}, {"type": "double", "name": "previous", "required":
+    true}, {"type": "double", "name": "job_admin.", "required": true}, {"type": "double",
+    "name": "job_blue-collar", "required": true}, {"type": "double", "name": "job_entrepreneur",
+    "required": true}, {"type": "double", "name": "job_housemaid", "required": true},
+    {"type": "double", "name": "job_management", "required": true}, {"type": "double",
+    "name": "job_retired", "required": true}, {"type": "double", "name": "job_self-employed",
+    "required": true}, {"type": "double", "name": "job_services", "required": true},
+    {"type": "double", "name": "job_student", "required": true}, {"type": "double",
+    "name": "job_technician", "required": true}, {"type": "double", "name": "job_unemployed",
+    "required": true}, {"type": "double", "name": "job_unknown", "required": true},
+    {"type": "double", "name": "marital_divorced", "required": true}, {"type": "double",
+    "name": "marital_married", "required": true}, {"type": "double", "name": "marital_single",
+    "required": true}, {"type": "double", "name": "education_primary", "required":
+    true}, {"type": "double", "name": "education_secondary", "required": true}, {"type":
+    "double", "name": "education_tertiary", "required": true}, {"type": "double",
+    "name": "education_unknown", "required": true}, {"type": "double", "name": "default_no",
+    "required": true}, {"type": "double", "name": "default_yes", "required": true},
+    {"type": "double", "name": "housing_no", "required": true}, {"type": "double",
+    "name": "housing_yes", "required": true}, {"type": "double", "name": "loan_no",
+    "required": true}, {"type": "double", "name": "loan_yes", "required": true}, {"type":
+    "double", "name": "contact_cellular", "required": true}, {"type": "double", "name":
+    "contact_telephone", "required": true}, {"type": "double", "name": "contact_unknown",
+    "required": true}, {"type": "double", "name": "month_apr", "required": true},
+    {"type": "double", "name": "month_aug", "required": true}, {"type": "double",
+    "name": "month_dec", "required": true}, {"type": "double", "name": "month_feb",
+    "required": true}, {"type": "double", "name": "month_jan", "required": true},
+    {"type": "double", "name": "month_jul", "required": true}, {"type": "double",
+    "name": "month_jun", "required": true}, {"type": "double", "name": "month_mar",
+    "required": true}, {"type": "double", "name": "month_may", "required": true},
+    {"type": "double", "name": "month_nov", "required": true}, {"type": "double",
+    "name": "month_oct", "required": true}, {"type": "double", "name": "month_sep",
+    "required": true}, {"type": "double", "name": "poutcome_failure", "required":
+    true}, {"type": "double", "name": "poutcome_other", "required": true}, {"type":
+    "double", "name": "poutcome_success", "required": true}, {"type": "double", "name":
+    "poutcome_unknown", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2026-05-25 16:06:02.667983'

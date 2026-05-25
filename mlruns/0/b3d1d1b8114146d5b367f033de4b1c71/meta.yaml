@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/titop/OneDrive/Dokumen/Dicoding/Pijak/Membangun%20Sistem%20Machine%20Learning/SMSML_Tito%20Purwana%20Sasmita/Workflow-CI/mlruns/0/b3d1d1b8114146d5b367f033de4b1c71/artifacts
+end_time: 1779724724937
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b3d1d1b8114146d5b367f033de4b1c71
+run_name: bemused-grouse-659
+run_uuid: b3d1d1b8114146d5b367f033de4b1c71
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1779724693953
+status: 4
+tags: []
+user_id: titop

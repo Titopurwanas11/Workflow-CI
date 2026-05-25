@@ -1,0 +1,51 @@
+{
+    "raw_dataset_shape": [
+        45211,
+        16
+    ],
+    "train_shape": [
+        36168,
+        51
+    ],
+    "test_shape": [
+        9043,
+        51
+    ],
+    "target_column": "target",
+    "dropped_columns": [
+        "duration"
+    ],
+    "numeric_features": [
+        "age",
+        "balance",
+        "day",
+        "campaign",
+        "pdays",
+        "previous"
+    ],
+    "categorical_features": [
+        "job",
+        "marital",
+        "education",
+        "default",
+        "housing",
+        "loan",
+        "contact",
+        "month",
+        "poutcome"
+    ],
+    "test_size": 0.2,
+    "random_state": 42,
+    "target_mapping": {
+        "no": 0,
+        "yes": 1
+    },
+    "train_target_distribution": {
+        "0": 0.8830181375801813,
+        "1": 0.11698186241981863
+    },
+    "test_target_distribution": {
+        "0": 0.8830034280659074,
+        "1": 0.11699657193409267
+    }
+}

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/titop/OneDrive/Dokumen/Dicoding/Pijak/Membangun%20Sistem%20Machine%20Learning/SMSML_Tito%20Purwana%20Sasmita/Workflow-CI/mlruns/0/8d8aef711e3448988169a06147372754/artifacts
+end_time: 1779725193364
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8d8aef711e3448988169a06147372754
+run_name: crawling-mouse-660
+run_uuid: 8d8aef711e3448988169a06147372754
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1779725133724
+status: 3
+tags: []
+user_id: titop
