@@ -1,5 +1,5 @@
 Docker Hub Repository:
-https://hub.docker.com/r/USERNAME_DOCKERHUB/bank-marketing-model
+https://hub.docker.com/r/titopurwanas/bank-marketing-model
 
 Docker Image:
-USERNAME_DOCKERHUB/bank-marketing-model:latest
+titopurwanas/bank-marketing-model:latest
